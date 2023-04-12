@@ -1,5 +1,19 @@
 @use "../abstracts" as *;
 
+.mx-auto {
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: $section-padding;
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+
+
 @each $size-name, $size-value in $sizes {
   .margin {
     &-#{$size-name} {
